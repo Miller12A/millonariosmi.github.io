@@ -1,0 +1,112 @@
+/* Estilos generales */
+body {
+    font-family: 'PT Sans', sans-serif;
+    background-image: url('fondo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(30, 30, 30, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 50%;
+}
+
+h1 {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 40px;
+    color: #007bff;
+    margin: 20px 0;
+}
+
+#question-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center; /* Agregado para centrar verticalmente */
+}
+
+#question {
+    font-size: 29px;
+    margin: 0; /* Eliminado el margen superior e inferior */
+    color: #fff;
+}
+
+
+/* Opciones */
+.options-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    text-align: center;
+}
+
+.option {
+    font-size: 18px;
+    margin: 10px;
+    padding: 15px;
+    background-color: #f3f3f3;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.option:hover {
+    background-color: #0772e3;
+}
+
+/* Resultado y botón siguiente */
+#result {
+    font-size: 20px;
+    margin: 0; /* Eliminado el margen superior e inferior */
+    color: #fff;
+    text-align: center; /* Agregado para centrar verticalmente */
+}
+
+
+#nextButton {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    display: block; 
+    margin: 0 auto; 
+}
+
+
+#nextButton:hover {
+    background-color: #0056b3;
+}
+
+
+h2{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 36px;
+    margin: 20px 0;
+}
