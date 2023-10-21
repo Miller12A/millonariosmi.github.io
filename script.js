@@ -1,34 +1,39 @@
 // Preguntas y respuestas
 const questions = [
     {
-        question: "¿Como considera al hombre que edificó sobre la roca?",
-        options: ["Prudente", "Insensato", "Sordo", "Todas las anteriores"],
-        correctAnswer: 0
-    },
-    {
-        question: "¿El hombre insensato en donde construyó?",
-        options: ["Cemento", "Roca", "Arena", "Cesped"],
-        correctAnswer: 2
-    },
-    {
-        question: "¿Que significa la arena?",
-        options: ["Teorias e inventos humanos", "Esfuerzo", "Testimonios", "Ninguna de las anteriores"],
-        correctAnswer: 0
-    },
-    {
-        question: "¿Edificar en la roca significa?",
-        options: ["Vivir segun los principios de ley", "Que la doctrina de la iglesia este basada en la ley de Dios", "Ninguna de las anteriores", "Todas las anteriores"],
-        correctAnswer: 3
-    },
-    {
-        question: "¿La casa es?",
-        options: ["La morada en el cielo", "El carácter", "La familia de la fé", "Todas las anteriores"],
+        question: "1) ¿Qué construyó el dueño de la viña en su propiedad?",
+        options: ["Un castillo", "Una torre", "Un estanque", "Un templo"],
         correctAnswer: 1
     },
     {
-        question: "¿Que es lo más peligroso?",
-        options: ["No oir", "Rechazar", "Oir y no hacer", "Ninguna de las anteriores"],
+        question: "2) ¿Qué hizo el dueño de la viña después de plantarla y construir las instalaciones?        ",
+        options: ["La regaló", "La vendió", "La alquiló a viñadores", "La abandonó"],
         correctAnswer: 2
+    },
+    {
+        question: "3) ¿Cómo trataron los viñadores a los sirvientes que el dueño envió para recoger el fruto?",
+        options: ["Los ignoraron", "Los recibieron con regalos", "Los atacaron y maltrataron", "Huyeron de ellos"],
+        correctAnswer: 2
+    },
+    {
+        question: "4) ¿A quién decide enviar el dueño de la viña después de que los viñadores maltrataran a sus sirvientes?",
+        options: ["A su esposa", "A su primo", "A su amigo", "A su hijo"],
+        correctAnswer: 3
+    },
+    {
+        question: "5) ¿Qué hicieron los viñadores cuando el dueño envió a su hijo?",
+        options: ["Lo asesinaron", " Lo invitaron a una fiesta", "Lo adoraron", "Hicieron una alianza con él"],
+        correctAnswer: 0
+    },
+    {
+        question: "6) ¿Cuál fue la razón de los viñadores para matar al hijo del dueño de la viña?",
+        options: ["Querían vengarse", "Creían que era un ladrón", "Pensaron que era un impostor", "Querían apoderarse de la herencia"],
+        correctAnswer: 3
+    },
+    {
+        question: "7) ¿Cómo reaccionaron los oyentes de la parábola cuando Jesús les preguntó qué haría el dueño de la viña con los viñadores?",
+        options: [" Se rieron", "Dijeron que el dueño destruiría a los viñadores malvados", " No entendieron la pregunta", "Sugirieron que el dueño debería perdonarlos"],
+        correctAnswer: 1
     }
 ];
 
@@ -76,13 +81,13 @@ function nextQuestion() {
     } else {
         questionElement.textContent = "¡Juego terminado, gracias por participar!";
         optionsElement.innerHTML = '';
-        resultElement.textContent = `Puntuación final: ${score}/18 puntos`;
-        if (score >= 15) {
-            questionElement.textContent = "¡Muy bien hermano, si prestó atencion! Su penitencia será decir un versiculo de memoria";
-        }   else if (score <= 9) {
-            questionElement.textContent = "¡Que paso hermano, no prestó mucha atencion! Su penitencia será presentar una alabanza";
+        resultElement.textContent = `Puntuación final: ${score}/24 puntos`;
+        if (score >= 21) {
+            questionElement.textContent = "¡Muy bien hermano, si prestó atencion! Su participación será presentar una alabanza";
+        }   else if (score <= 15 ) {
+            questionElement.textContent = "¡Que paso hermano, no prestó mucha atencion! Su participacióm será presentar una alabanza";
         } else {
-            questionElement.textContent = "¡Se salvó por poco hermano! Su penitencia será decir dos versiculos de memoria";
+            questionElement.textContent = "¡Se salvó por poco hermano! Su participación será presentar una alabanza";
         }
     }
 
