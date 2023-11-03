@@ -61,14 +61,21 @@ function displayQuestion() {
 
 function checkAnswer(selectedIndex) {
     const currentQuestion = questions[currentQuestionIndex];
-    if (selectedIndex === currentQuestion.correctAnswer) {
+    if (currentQuestion.correctAnswer === selectedIndex && !currentQuestion.answered) {
         score += 3;
         resultElement.textContent = "Respuesta Correcta. Ganaste 3 puntos en esta pregunta.";
-    } else {
+        document.querySelectorAll('.option')[selectedIndex].classList.add('correct-answer');
+    } else if (!currentQuestion.answered) {
         resultElement.textContent = "Respuesta Incorrecta. No ganaste puntos en esta pregunta.";
+        document.querySelectorAll('.option')[currentQuestion.correctAnswer].classList.add('correct-answer');
+        document.querySelectorAll('.option')[selectedIndex].classList.add('incorrect-answer');
     }
 
+    currentQuestion.answered = true;
     nextButton.style.display = "block";
+    document.querySelectorAll('.option').forEach(option => {
+        option.style.pointerEvents = 'none';
+    });
 }
 
 function nextQuestion() {
@@ -90,8 +97,6 @@ function nextQuestion() {
             questionElement.textContent = "¡Se salvó por poco hermano! Su participación será presentar una alabanza";
         }
     }
-
-
 }
 
 nextButton.addEventListener("click", nextQuestion);
